@@ -1,7 +1,10 @@
 
 # fon-belgacom-autoconnect-cli
  >  The aim is to find a way to reconnect automaticaly to Belgacom FON hotspots..
+
  >  If failed credentials are still copied and waiting to be paste
+
+  Please share your ideas, code,..! :)
 
 ## Usage
  `$ fon`  
@@ -31,7 +34,6 @@ export PATH=$PATH:.
  ### Done! :beers:
  ------------
 
-Please share your ideas! :)
 
 ### MIT License
 
