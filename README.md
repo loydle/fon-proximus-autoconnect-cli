@@ -1,6 +1,6 @@
 
 # fon-cli 
- >  The aim is to find a way to reconnect automaticaly to Belgacom FON hotspots but first start at the bottom: V1- Copy FON hotspot credentials.
+ >  The aim is to find a way to reconnect automaticaly to Belgacom FON hotspots..
 
 
 ## Usage
