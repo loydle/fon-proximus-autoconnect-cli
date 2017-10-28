@@ -1,6 +1,6 @@
 
-# fon-belgacom-autoconnect-cli
- >  The aim is to find a way to reconnect automaticaly to Belgacom FON hotspots..
+# fon-proximus-autoconnect-cli
+ >  The aim is to find a way to reconnect automaticaly to proximus FON hotspots..
  > 
  >  If failed credentials are still copied and waiting to be paste
  >
@@ -12,13 +12,13 @@
 
 ## Install 
 
-`$ git clone https://github.com/loydle/fon-belgacom-autoconnect-cli.git`
+`$ git clone https://github.com/loydle/fon-proximus-autoconnect-cli.git`
 
 Edit credentials
 
-`$ vim fon-belgacom-autoconnect-cli/fon`
+`$ vim fon-proximus-autoconnect-cli/fon`
 
-`$ cp fon-belgacom-autoconnect-cli/fon /usr/local/bin/fon `
+`$ cp fon-proximus-autoconnect-cli/fon /usr/local/bin/fon `
 
 `$ chmod 755 /usr/local/bin/fon`
 
