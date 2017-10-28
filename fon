@@ -4,6 +4,17 @@
 
 USER_NAME='username'
 PASSWORD='password'
+
+# COPY username & password
 echo "$USER_NAME@belgacomfon.be;$PASSWORD" | pbcopy
 echo "Credentials copied!"
+
+
+# TRY auto connect
+# GET cookie
+curl -c .fonCookie https://belgacom.portal.fon.com
+# POST login credentials
+curl -Lb .fonCookie -d "login[user]=$USER_NAME&login[pass]=$PASSWORD" "https://belgacom.portal.fon.com/login/processLogin" 2>/dev/null -o /dev/null
+# remove cookie
+rm .fonCookie
 
