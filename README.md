@@ -30,3 +30,6 @@ export PATH=$PATH:.
  
  ### Done! :beers:
  ------------
+
+Please share your ideas! :)
+
