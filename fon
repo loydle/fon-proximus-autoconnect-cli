@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# USAGE: $ fon 
+
+USER_NAME='username'
+PASSWORD='password'
+echo "$USER_NAME@belgacomfon.be;$PASSWORD" | pbcopy
+echo Credentials copied...
