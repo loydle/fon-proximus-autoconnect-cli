@@ -2,11 +2,11 @@
 
 # USAGE: $ fon 
 
-USER_NAME='username'
+USER_NAME='username@belgacomfon.be'
 PASSWORD='password'
 
 # COPY username & password
-echo "$USER_NAME@belgacomfon.be;$PASSWORD" | pbcopy
+echo "$USER_NAME;$PASSWORD" | pbcopy
 echo "Credentials copied!"
 
 
