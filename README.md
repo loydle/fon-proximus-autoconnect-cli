@@ -1,5 +1,5 @@
 
-# fon-cli 
+# fon-belgacom-autoconnect-cli
  >  The aim is to find a way to reconnect automaticaly to Belgacom FON hotspots..
 
 
