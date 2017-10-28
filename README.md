@@ -9,13 +9,13 @@
 
 ## Install 
 
-`$ git clone https://github.com/loydle/fon-cli.git`
+`$ git clone https://github.com/loydle/fon-belgacom-autoconnect-cli.git`
 
 Edit credentials
 
-`$ vim fon-cli/fon`
+`$ vim fon-belgacom-autoconnect-cli/fon`
 
-`$ cp fon-cli/fon /usr/local/bin/fon `
+`$ cp fon-belgacom-autoconnect-cli/fon /usr/local/bin/fon `
 
 `$ chmod 755 /usr/local/bin/fon`
 
