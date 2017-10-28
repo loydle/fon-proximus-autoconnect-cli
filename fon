@@ -6,7 +6,7 @@ USER_NAME='username@belgacomfon.be'
 PASSWORD='password'
 
 # COPY username & password
-echo "$USER_NAME;$PASSWORD" | pbcopy
+echo "$USER_NAME $PASSWORD" | pbcopy
 echo "Credentials copied!"
 
 
