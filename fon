@@ -7,7 +7,7 @@ PASSWORD='password'
 
 # COPY username & password
 echo "$USER_NAME $PASSWORD" | pbcopy
-echo "Credentials copied!"
+printf '\033[1;33mCredentials copied!\n\033[0m'
 
 
 # TRY auto connect
