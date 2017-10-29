@@ -12,7 +12,7 @@ echo "Credentials copied!"
 
 # TRY auto connect
 # GET cookie
-curl -c .fonCookie -o /dev/null http://google.com
+curl -c .fonCookie -o /dev/null -L http://google.com
 # POST login credentials
 curl -Lb .fonCookie -d "login[user]=$USER_NAME&login[pass]=$PASSWORD" "https://belgacom.portal.fon.com/login/processLogin" 2>/dev/null -o /dev/null
 # remove cookie
