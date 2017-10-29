@@ -7,14 +7,13 @@ PASSWORD='password'
 
 # COPY username & password
 echo "$USER_NAME $PASSWORD" | pbcopy
-echo "Credentials copied!"
-
+printf '\033[1;33mCredentials copied!\n\033[0m'
 
 # TRY auto connect
 # GET cookie
 curl -c .fonCookie -o /dev/null -L http://google.com
 # POST login credentials
-echo "Try Reconneting..."
+printf '\033[1;33mTry to reconnect..\n\033[0m'
 curl -Lb .fonCookie -d "login[user]=$USER_NAME&login[pass]=$PASSWORD" "https://belgacom.portal.fon.com/login/processLogin" 2>/dev/null -o /dev/null
 # remove cookie
 rm .fonCookie
