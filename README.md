@@ -1,58 +1,41 @@
+# Proximus Fon Autoconnect
+This script automates the process of connecting to a Proximus Fon hotspot.
 
-# fon-proximus-autoconnect-cli
- >  The aim is to find a way to reconnect automaticaly to proximus FON hotspots..
- > 
- >  If failed credentials are still copied and waiting to be paste
- >
- > Please share your ideas & code sample :)
+## Requirements
+
+`curl` or `wget` must be installed on your system
 
 ## Usage
- `$ fon`  
-
-
-## Install 
-
-`$ git clone https://github.com/loydle/fon-proximus-autoconnect-cli.git`
-
-Edit credentials
-
-`$ vim fon-proximus-autoconnect-cli/fon`
-
-`$ cp fon-proximus-autoconnect-cli/fon /usr/local/bin/fon `
-
-`$ chmod 755 /usr/local/bin/fon`
-
-`$ [vim] ~/.bash_script`
-
-add the following line to * ~/.bash_profile *
-
-```bash
-export PATH=$PATH:.
 
 ```
- 
- ### Done! :beers:
- ------------
+Usage: proximusfon [-u username] [-p password]
 
+Options:
+  -u, --username   The Fon username (default: your_username@proximus.be)
+  -p, --password   The Fon password (default: your_password)
+```
 
-### MIT License
+## Configuration
 
-2017 DigitalSC.org
+You can specify the Fon username and password either by using the `-u` and `-p` options when running the script, or by creating a configuration file called `.proximusfon.conf` in the same directory as the script, and adding the following lines to the file:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+```
+USERNAME='your_username@proximus.be'
+PASSWORD='your_password'
+```
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The script will use the login credentials specified in the configuration file, if it exists, or it will use the default credentials specified in the script if the configuration file does not exist. If the `-u` and `-p` options are specified when running the script, they will override the credentials specified in the configuration file.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+### Examples
+
+To connect to a Proximus Fon hotspot using the default login credentials:
+
+```
+./proximusfon
+```
+
+To connect to a Proximus Fon hotspot using a different username and password:
+
+```
+./proximusfon -u my_username@proximus.be -p my_password
+```

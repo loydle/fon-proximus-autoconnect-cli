@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# USAGE: $ proximusfon -u username -p password
+
+# Set the default Fon username and password
+USERNAME='your_username@proximus.be'
+PASSWORD='your_password'
+
+# Parse the command-line options
+while getopts ":u:p:" opt; do
+  case $opt in
+    u) USERNAME="$OPTARG"
+    ;;
+    p) PASSWORD="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    exit 1
+    ;;
+  esac
+done
+
+# Read the login credentials from the configuration file, if it exists
+if [ -f ".proximusfon.conf" ]; then
+  source ".proximusfon.conf"
+fi
+
+# Get the cookie
+printf '\033[1;33mGetting cookie\033[0m'
+wget --save-cookies .proximusCookie --delete-after http://www.google.be 2> /dev/null
+printf ' \033[1;92mOK\n\033[0m'
+
+# Send the login request
+printf '\033[1;33mTry to connect\033[0m'
+wget --load-cookies .proximusCookie --post-data "login[user]=$USERNAME&login[pass]=$PASSWORD" "https://www.proximus.be/fon/login/process" 2>/dev/null -o /dev/null
+printf ' \033[1;92mOK\n\033[0m'
+
+# Remove the cookie file
+rm .proximusCookie 2>/dev/null
